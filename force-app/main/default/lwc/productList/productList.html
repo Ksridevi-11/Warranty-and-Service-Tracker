@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Products">
+        <template if:true={products.data}>
+            <template for:each={products.data} for:item="p">
+                <p key={p.Id}>{p.Name} - {p.Serial_Number__c} - {p.Price__c}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>
